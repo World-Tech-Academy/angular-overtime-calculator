@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Overtime Calculator</title>
+	</head>
+	<body ng-app="overtime" ng-controller="overtime as ot">
+		Hours Worked: <input ng-model="ot.hours"><br>
+		Pay Rate: $<input ng-model="ot.rate"></input><br>
+		<button ng-click="ot.calcPaymentDue()">Calculate</button><br>
+		<div>{{ot.due | currency}}</div>
+
+		<script src="bower_components/angular/angular.min.js"></script>
+		<script src="app.js"></script>
+		<script src="controllers.js"></script>
+		<script src="services.js"></script>
+	</body>
+</html>
